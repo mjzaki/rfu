@@ -111,9 +111,9 @@ vertical-align: top;
 
 
 <script>
-    jQuery('#mc-embedded-subscribe-form').submit(function (e) {
+    $('#mc-embedded-subscribe-form').submit(function (e) {
         var $this = jQuery(this);
-        jQuery.ajax({
+        $.ajax({
             type: "GET", 
             url: "https://ratedforus.us1.list-manage.com/subscribe/post-jsonp?u=7f0a0d8be1f47f50a3ee562aa&amp;id=21cb242904",
             data: $this.serialize(),
@@ -124,13 +124,13 @@ vertical-align: top;
             },
             success: function (data) {
                 if (data.result != "success") {
-                    jQuery('.thankYouMessage').css("display","block");
-                    jQuery('.thankYouMessage').text(data.msg.substr(0, data.msg.indexOf('<')));
+                    $('.thankYouMessage').css("display","block");
+                    $('.thankYouMessage').text(data.msg.substr(0, data.msg.indexOf('<')));
                     alert("failed");
                 } else {
-                    jQuery('.mailchimpform').hide();
-                    jQuery('.thankYouMessage').css("display","block");
-                    jQuery('.thankYouMessage').text(data.msg);
+                    $('.mailchimpform').hide();
+                    $('.thankYouMessage').css("display","block");
+                    $('.thankYouMessage').text(data.msg);
                     alert("success");
 
                 }
