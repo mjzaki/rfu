@@ -1,375 +1,84 @@
 <!DOCTYPE html>
 <html class="cspio">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>RatedForUs</title>
-
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta property="og:url" content="https://www.ratedforus.com" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="RatedForUs" />
-	<meta property="og:description" content="" />
-	
-	<!-- Font Awesome CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-	<!-- Bootstrap and default Style -->
-	 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://static.comingsoonpage.com/cspio-assets/1.0.0/style.css">
-
-
-
-	<!-- Google Fonts -->
-				<link class="gf-headline" href='https://fonts.googleapis.com/css?family=Open+Sans:800&subset=' rel='stylesheet' type='text/css'>
-						<link class="gf-text" href='https://fonts.googleapis.com/css?family=Open+Sans:700&subset=' rel='stylesheet' type='text/css'>
+	<head>
+		<meta charset="utf-8"> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<title>RatedForUs</title>
+		<meta name="description" content=""> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<meta property="og:url" content="https://www.ratedforus.com" /> 
+		<meta property="og:type" content="website" /> 
+		<meta property="og:title" content="RatedForUs" /> 
+		<meta property="og:description" content="" />
+		<!-- Font Awesome CSS --> 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Bootstrap and default Style --> 
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://static.comingsoonpage.com/cspio-assets/1.0.0/style.css">
+		<!-- Google Fonts --> 
+		<link class="gf-headline" href='https://fonts.googleapis.com/css?family=Open+Sans:800&subset=' rel='stylesheet' type='text/css'> 
+		<link class="gf-text" href='https://fonts.googleapis.com/css?family=Open+Sans:700&subset=' rel='stylesheet' type='text/css'>
+		<!-- RTL -->
 		
-	
-	<!-- RTL -->
-
-
-
-	
-
-
-	<!-- Calculated Styles -->
-	<style type="text/css">
-	
-	
-	
-	
-	/* Background Style */
-	html{
-		height:100%;
-			    	background: #8f7af6;
-			}
-
-		#cspio-page{
-		background-color: rgba(0,0,0,0);
-	}
-	
-	.flexbox #cspio-page{
-			align-items: center;
-		justify-content: center;
-										}
-
-
-
-	.cspio body{
-		background: transparent;
-	}
-
-
-    /* Text Styles */
-    	    .cspio body, .cspio body p{
-	        font-family: 'Open Sans';
-			font-weight: 700;
-			font-style: ;
-	        font-size: 23px;
-	        line-height: 1.11em;
-	        	        color:#ffffff;
-	        	 	}
-
-		::-webkit-input-placeholder {
-			font-family:'Open Sans';
-			font-weight: 700;
-			font-style: ;
-		}
-		::-moz-placeholder {
-			font-family:'Open Sans';
-			font-weight: 700;
-			font-style: ;
-		} /* firefox 19+ */
-		:-ms-input-placeholder {
-			font-family:'Open Sans';
-			font-weight: 700;
-			font-style: ;
-		} /* ie */
-		:-moz-placeholder {
-			font-family:'Open Sans';
-			font-weight: 700;
-			font-style: ;
-		}
-
-    
-
-
-	    .cspio h1, .cspio h2, .cspio h3, .cspio h4, .cspio h5, .cspio h6{
-	    	        font-family: 'Open Sans';
-	    	        	        color:#39393b;
-	        	    }
-		#cspio-headline{
-					font-family: 'Open Sans';
-			font-weight: 800;
-			font-style: ;
-					font-size: 37px;
-			color:#39393b;
-			line-height: 1.00em;
-		}
-
-    		.cspio button{
-	        font-family: 'Open Sans';
-			font-weight: 700;
-			font-style: ;
-	    }
-    
-    /* Link Styles */
-    		.cspio a, .cspio a:visited, .cspio a:hover, .cspio a:active{
-			color: #39393b;
-		}
-
-
-		#cspio-socialprofiles a {
-  color: #ffffff;
-}
-.cspio .btn-primary,
-.cspio .btn-primary:focus,
-.gform_button,
-#mc-embedded-subscribe,
-.mymail-wrapper .submit-button {
-  color: white;
-  text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
-  background-color: #39393b;
-  background-image: -moz-linear-gradient(top,#39393b,#131314);
-  background-image: -ms-linear-gradient(top,#39393b,#131314);
-  background-image: -webkit-gradient(linear,0 0,0 100%,from(#39393b),to(#131314));
-  background-image: -webkit-linear-gradient(top,#39393b,#131314);
-  background-image: -o-linear-gradient(top,#39393b,#131314);
-  background-image: linear-gradient(top,#39393b,#131314);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#39393b', endColorstr='#131314', GradientType=0);
-  border-color: #131314 #131314 #000000;
-  border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
-  *background-color: #131314;
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-}
-.cspio .btn-primary:hover,
-.cspio .btn-primary:active,
-.cspio .btn-primary.active,
-.cspio .btn-primary.disabled,
-.cspio .btn-primary[disabled],
-.cspio .btn-primary:focus:hover,
-.cspio .btn-primary:focus:active,
-.cspio .btn-primary:focus.active,
-.cspio .btn-primary:focus.disabled,
-.cspio .btn-primary:focus[disabled],
-.gform_button:hover,
-.gform_button:active,
-.gform_button.active,
-.gform_button.disabled,
-.gform_button[disabled],
-#mc-embedded-subscribe:hover,
-#mc-embedded-subscribe:active,
-#mc-embedded-subscribe.active,
-#mc-embedded-subscribe.disabled,
-#mc-embedded-subscribe[disabled],
-.mymail-wrapper .submit-button:hover,
-.mymail-wrapper .submit-button:active,
-.mymail-wrapper .submit-button.active,
-.mymail-wrapper .submit-button.disabled,
-.mymail-wrapper .submit-button[disabled] {
-  background-color: #131314;
-  *background-color: #070707;
-}
-.cspio .btn-primary:active,
-.cspio .btn-primary.active,
-.cspio .btn-primary:focus:active,
-.cspio .btn-primary:focus.active,
-.gform_button:active,
-.gform_button.active,
-#mc-embedded-subscribe:active,
-#mc-embedded-subscribe.active,
-.mymail-wrapper .submit-button:active,
-.mymail-wrapper .submit-button.active {
-  background-color: #000000 \9;
-}
-.form-control,
-.progress {
-  background-color: #f5f5f5;
-}
-#cspio-progressbar span,
-.countdown_section {
-  color: white;
-  text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
-}
-.cspio .btn-primary:hover,
-.cspio .btn-primary:active {
-  color: white;
-  text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
-  border-color: #202021;
-}
-.cspio input[type='text']:focus {
-  webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(20,20,21,0.6);
-  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(20,20,21,0.6);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(20,20,21,0.6);
-}
-    
-
-    #cspio-content {
-  max-width: 1399px;
-  background-color: #000000;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-}
-
-        #cspio-content{
-    	background-color:transparent;
-    }
-    
-    
-		.cspio .progress-bar,
-.countdown_section,
-.cspio .btn-primary,
-.cspio .btn-primary:focus,
-.gform_button {
-  background-image: none;
-  text-shadow: none;
-}
-.countdown_section,
-.cspio .progress-bar {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.cspio input,
-.cspio input:focus {
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-}
-	
-		
-									
-
-	
-
-	
-	</style>
-	<!-- JS -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<!-- FitVid -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
-	<!-- Scripts -->
-	<script src="https://static.comingsoonpage.com/cspio-assets/1.0.0/scripts.js"></script>
-	<!-- Modernizr -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-	<!-- Retina JS -->
-	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/retina.js/1.3.0/retina.min.js"></script>-->
-	<!-- Tubular -->
-	<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/7f0a0d8be1f47f50a3ee562aa/3bc67bf14c7451ab6d792e9a4.js");</script>
-
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!-- Header Scripts -->
-	
-	
-
-
-	
-<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<!-- Calculated Styles --> 
 <style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
-	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>	
-	
-<!-- Google Analytics -->
-</head>
-<body>
-	<div id="cspio-page">
-		<div id="cspio-content">
-						    			    			    				
-						    			    <h1 id="cspio-headline">RatedForUs.com<br>Coming Soon</h1>			    				
-						    			    <div id="cspio-description"><div class="page" title="Page 3"><div class="section"><div class="layoutArea"><div class="column"><p>You can’t solve a problem you don’t understand.</p></div></div></div></div><p>Get ready! Something new is coming soon!</p></div>			    				
+/* Background Style */ html{ height:100%; background: #8f7af6; }
+#cspio-page{ background-color: rgba(0,0,0,0); }
+.flexbox #cspio-page{ align-items: center; justify-content: center; }
+.cspio body{ background: transparent; }
+/* Text Styles */ .cspio body, .cspio body p{ font-family: 'Open Sans'; font-weight: 700; font-style: ; font-size: 23px; line-height: 1.11em; color:#ffffff; }
+::-webkit-input-placeholder { font-family:'Open Sans'; font-weight: 700; font-style: ; } ::-moz-placeholder { font-family:'Open Sans'; font-weight: 700; font-style: ; } /* firefox 19+ */ :-ms-input-placeholder { font-family:'Open Sans'; font-weight: 700; font-style: ; } /* ie */ :-moz-placeholder { font-family:'Open Sans'; font-weight: 700; font-style: ; }
+.cspio h1, .cspio h2, .cspio h3, .cspio h4, .cspio h5, .cspio h6{ font-family: 'Open Sans'; color:#39393b; } #cspio-headline{ font-family: 'Open Sans'; font-weight: 800; font-style: ; font-size: 37px; color:#39393b; line-height: 1.00em; }
+.cspio button{ font-family: 'Open Sans'; font-weight: 700; font-style: ; 
+/* Link Styles */ .cspio a, .cspio a:visited, .cspio a:hover, .cspio a:active{ color: #39393b; }
+#cspio-socialprofiles a { color: #ffffff; } 
+.cspio .btn-primary, .cspio .btn-primary:focus, .gform_button, #mc-embedded-subscribe, .mymail-wrapper .submit-button { color: white; text-shadow: 0 -1px 0 rgba(0,0,0,0.3); background-color: #39393b; background-image: -moz-linear-gradient(top,#39393b,#131314); background-image: -ms-linear-gradient(top,#39393b,#131314); background-image: -webkit-gradient(linear,0 0,0 100%,from(#39393b),to(#131314)); background-image: -webkit-linear-gradient(top,#39393b,#131314); background-image: -o-linear-gradient(top,#39393b,#131314); background-image: linear-gradient(top,#39393b,#131314); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#39393b', endColorstr='#131314', GradientType=0); border-color: #131314 #131314 #000000; border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25); *background-color: #131314; filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); } .cspio .btn-primary:hover, .cspio .btn-primary:active, .cspio .btn-primary.active, .cspio .btn-primary.disabled, .cspio .btn-primary[disabled], .cspio .btn-primary:focus:hover, .cspio .btn-primary:focus:active, .cspio .btn-primary:focus.active, .cspio .btn-primary:focus.disabled, .cspio .btn-primary:focus[disabled], .gform_button:hover, .gform_button:active, .gform_button.active, .gform_button.disabled, .gform_button[disabled], #mc-embedded-subscribe:hover, #mc-embedded-subscribe:active, #mc-embedded-subscribe.active, #mc-embedded-subscribe.disabled, #mc-embedded-subscribe[disabled], .mymail-wrapper .submit-button:hover, .mymail-wrapper .submit-button:active, .mymail-wrapper .submit-button.active, .mymail-wrapper .submit-button.disabled, .mymail-wrapper .submit-button[disabled] { background-color: #131314; *background-color: #070707; } .cspio .btn-primary:active, .cspio .btn-primary.active, .cspio .btn-primary:focus:active, .cspio .btn-primary:focus.active, .gform_button:active, .gform_button.active, #mc-embedded-subscribe:active, #mc-embedded-subscribe.active, .mymail-wrapper .submit-button:active, .mymail-wrapper .submit-button.active { background-color: #000000 \9; } .form-control, .progress { background-color: #f5f5f5; } #cspio-progressbar span, .countdown_section { color: white; text-shadow: 0 -1px 0 rgba(0,0,0,0.3); } .cspio .btn-primary:hover, .cspio .btn-primary:active { color: white; text-shadow: 0 -1px 0 rgba(0,0,0,0.3); border-color: #202021; } .cspio input[type='text']:focus { webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(20,20,21,0.6); -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(20,20,21,0.6); box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(20,20,21,0.6); }
+#cspio-content { max-width: 1399px; background-color: #000000; -webkit-border-radius: 2px; border-radius: 2px; -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; }
+#cspio-content{ background-color:transparent; }
+.cspio .progress-bar, .countdown_section, .cspio .btn-primary, .cspio .btn-primary:focus, .gform_button { background-image: none; text-shadow: none; } 
+.countdown_section, .cspio .progress-bar { -webkit-box-shadow: none; box-shadow: none; } 
+.cspio input, .cspio input:focus { -webkit-box-shadow: none !important; box-shadow: none !important; }
+</style> 
 
+<!-- JS --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<!-- FitVid --> <script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script> 
+<!-- Scripts --> <script src="https://static.comingsoonpage.com/cspio-assets/1.0.0/scripts.js"></script> 
+<!-- Modernizr --> <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> 
+<!-- Retina JS --> <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/retina.js/1.3.0/retina.min.js"></script>--> 
+<!-- Tubular --> <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/7f0a0d8be1f47f50a3ee562aa/3bc67bf14c7451ab6d792e9a4.js");</script>
 
-        <!-- Begin Mailchimp Signup Form -->
+<!-- Header Scripts -->
+<!-- Google Analytics --> 
+</head> 
 
-        <div id="mc_embed_signup">
-            <form class="mailchimpform" action="https://ratedforus.us1.list-manage.com/subscribe/post" method="POST" target="formaReturning">
-                <input type="hidden" name="u" value="7f0a0d8be1f47f50a3ee562aa">
-                <input type="hidden" name="id" value="21cb242904">
-		<div class="mc-field-group">
-			<label for="mce-EMAIL">Email Address </label>
-			<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-		</div>
-            <div id="thankYouMessage" style="display:none;">
-                <p>Thank you for subscribing!</>
-            </div>
-
-	        <iframe name="formaReturning" style="display:none !important;" frameborder="0"></iframe>
-	        <!--End mc_embed_signup-->
-   
-		<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-	    	<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7f0a0d8be1f47f50a3ee562aa_21cb242904" tabindex="-1" value=""></div>
-	    	<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-            </form>
-	</div>
-<!--End mc_embed_signup-->
-		
-
-<script>
-    jQuery('.myform').submit(function (e) {
-        var $this = jQuery(this);
-        jQuery.ajax({
-            type: "GET", 
-            url: "https://ratedforus.us1.list-manage.com/subscribe/post-json?c=?",
-            data: $this.serialize(),
-            dataType: 'json',
-            contentType: "application/json; charset=utf-8",
-            error: function (err) {
-                alert("Could not connect to the registration server.");
-            },
-            success: function (data) {
-                if (data.result != "success") {
-                    jQuery('#thankYouMessage').css("display","block");
-                    jQuery('#thankYouMessage').text(data.msg.substr(0, data.msg.indexOf('<')));
-                } else {
-                    jQuery('.mailchimpform').hide();
-                    jQuery('#thankYouMessage').css("display","block");
-                    jQuery('#thankYouMessage').text(data.msg);
-
-                }
-            }
-        });
-        return false;
-    });
-</script>	
-	
-		<!-- #secondary -->
-
-						
-			
-		</div><!-- end of #seed-cspio-content -->
+<body> 
+	<div id="cspio-page"> 
+		<div id="cspio-content"> 
+			<h1 id="cspio-headline">RatedForUs.com<br>Coming Soon</h1> 
+			<div id="cspio-description">
+				<div class="page" title="Page 3">
+					<div class="section">
+						<div class="layoutArea">
+							<div class="column"><p>You can’t solve a problem you don’t understand.</p></div>
+						</div>
+					</div>
+				</div>
+				<p>Get ready! Something new is coming soon!</p>
 			</div>
+		</div><!-- end of #seed-cspio-content --> 
+	</div>
 
-	<!-- <script>jQuery(document).ready(function($){$("#cspio-description,#cspio-thankyoumsg").fitVids();});</script> -->
-
-	<!-- Animate -->
-	
-	
-		
-	<script>
-	function resize(){
-			$('head').append("<style id='form-style' type='text/css'></style>");
-			$('#form-style').html('.cspio .input-group-btn, .cspio .input-group{display:block;width:100%;}.cspio #cspio-subscribe-btn{margin-left:0;width:100%;display:block;}.cspio .input-group .form-control:first-child, .cspio .input-group-addon:first-child, .cspio .input-group-btn:first-child>.btn, .cspio .input-group-btn:first-child>.dropdown-toggle, .cspio .input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle) {border-bottom-right-radius: 4px;border-top-right-radius: 4px;}.cspio .input-group .form-control:last-child, .cspio .input-group-addon:last-child, .cspio .input-group-btn:last-child>.btn, .cspio .input-group-btn:last-child>.dropdown-toggle, .cspio .input-group-btn:first-child>.btn:not(:first-child) {border-bottom-left-radius: 4px;border-top-left-radius: 4px;}');
-	}
-	
-	$('#cspio-content').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-		var width = $('#cspio-field-wrapper').width();
-		//console.log(width);
-		if(width < 480 && width != 0){
-			resize();
-		}
-	}
-	);
-	</script>
-
-
-
-
-	
-	</body>
+		<script>jQuery(document).ready(function($){$("#cspio-description,#cspio-thankyoumsg").fitVids();});</script>
+		<script> function resize(){ $('head').append("<style id='form-style' type='text/css'></style>"); $('#form-style').html('.cspio .input-group-btn, .cspio .input-group{display:block;width:100%;}.cspio #cspio-subscribe-btn{margin-left:0;width:100%;display:block;}.cspio .input-group .form-control:first-child, .cspio .input-group-addon:first-child, .cspio .input-group-btn:first-child>.btn, .cspio .input-group-btn:first-child>.dropdown-toggle, .cspio .input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle) {border-bottom-right-radius: 4px;border-top-right-radius: 4px;}.cspio .input-group .form-control:last-child, .cspio .input-group-addon:last-child, .cspio .input-group-btn:last-child>.btn, .cspio .input-group-btn:last-child>.dropdown-toggle, .cspio .input-group-btn:first-child>.btn:not(:first-child) {border-bottom-left-radius: 4px;border-top-left-radius: 4px;}'); }
+				$('#cspio-content').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){ 
+					var width = $('#cspio-field-wrapper').width(); 
+					//console.log(width); 
+					if(width < 480 && width != 0){ 
+						resize(); 
+					} 
+				} 
+			); 
+		</script>
+</body> 
 </html>
