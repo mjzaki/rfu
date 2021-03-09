@@ -260,7 +260,43 @@
 	<!-- Tubular -->
 	<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/7f0a0d8be1f47f50a3ee562aa/3bc67bf14c7451ab6d792e9a4.js");</script>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- Header Scripts -->
+	
+	
+
+	<!-- #secondary -->
+
+
+<script>
+    jQuery('.myform').submit(function (e) {
+        var $this = jQuery(this);
+        jQuery.ajax({
+            type: "GET", 
+            url: "https://YORLINK.list-manage.com/subscribe/post-json?c=?",
+            data: $this.serialize(),
+            dataType: 'json',
+            contentType: "application/json; charset=utf-8",
+            error: function (err) {
+                alert("Could not connect to the registration server.");
+            },
+            success: function (data) {
+                if (data.result != "success") {
+                    jQuery('#thankYouMessage').css("display","block");
+                    jQuery('#thankYouMessage').text(data.msg.substr(0, data.msg.indexOf('<')));
+                } else {
+                    jQuery('.mailchimpform').hide();
+                    jQuery('#thankYouMessage').css("display","block");
+                    jQuery('#thankYouMessage').text(data.msg);
+
+                }
+            }
+        });
+        return false;
+    });
+</script>
+	
+	
 	
 <!-- Google Analytics -->
 </head>
@@ -295,6 +331,23 @@
 
 <!--End mc_embed_signup-->
 			
+	<!-- Begin Mailchimp Signup Form -->
+
+        <div id="mc_embed_signup">
+            <form class="mailchimpform" action="https://ratedforus.us1.list-manage.com/subscribe/post" method="POST" target="formaReturning">
+                <input type="hidden" name="u" value="7f0a0d8be1f47f50a3ee562aa">
+                <input type="hidden" name="id" value="21cb242904">
+                <input type="email" value="" name="EMAIL" class="button border-0 w-100" id="mce-EMAIL" placeholder="email address" required>
+                <input type="submit" class="button button-primary w-100 border-0" value="Send" name="submit" id="mc-embedded-subscribe">
+            </form>
+            <div id="thankYouMessage" style="display:none;">
+                <p>Thank you for subscribing!</>
+            </div>
+        </div>
+
+        <iframe name="formaReturning" style="display:none !important;" frameborder="0"></iframe>
+        <!--End mc_embed_signup-->			
+						
 			
 		</div><!-- end of #seed-cspio-content -->
 			</div>
