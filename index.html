@@ -122,10 +122,16 @@
                         message = "You're already subscribed. Thank you.";
                     }
 
+					jQuery('#thankYouMessage').css("display","block");
+                    jQuery('#thankYouMessage').text(data.msg.substr(0, data.msg.indexOf('<')));
+
                     jQuery('#thankYouMessage').html(message);
 
                 } else {
                 	jQuery('#thankYouMessage').html("Thank you!<br>You must confirm the subscription in your inbox.");
+                	jQuery('#mc-embedded-subscribe-form').hide();
+                    jQuery('#thankYouMessage').css("display","block");
+                    jQuery('#thankYouMessage').text(data.msg);
                 }
             }
         });
