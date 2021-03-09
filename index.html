@@ -122,10 +122,10 @@
                         message = "You're already subscribed. Thank you.";
                     }
 
-                    $thankYouMessage.html(message);
+                    jQuery('#thankYouMessage').html(message);
 
                 } else {
-                	$thankYouMessage.html("Thank you!<br>You must confirm the subscription in your inbox.");
+                	jQuery('#thankYouMessage').html("Thank you!<br>You must confirm the subscription in your inbox.");
                 }
             }
         });
