@@ -84,6 +84,9 @@
     <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
     </div>
 </form>
+<div id="thankYouMessage" style="display:none;">
+	<p>Thank you, you are not part of our waitlist!</>
+</div>
 </div>
 
 <!--End mc_embed_signup-->
@@ -119,10 +122,10 @@
                         message = "You're already subscribed. Thank you.";
                     }
 
-                    $resultElement.html(message);
+                    $thankYouMessage.html(message);
 
                 } else {
-                	$resultElement.html("Thank you!<br>You must confirm the subscription in your inbox.");
+                	$thankYouMessage.html("Thank you!<br>You must confirm the subscription in your inbox.");
                 }
             }
         });
