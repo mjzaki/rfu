@@ -39,8 +39,45 @@
 .countdown_section, .cspio .progress-bar { -webkit-box-shadow: none; box-shadow: none; } 
 .cspio input, .cspio input:focus { -webkit-box-shadow: none !important; box-shadow: none !important; }
 
-#mc_embed_signup input.email {
+#mailchimpform input.email {
 	font-family: "Open Sans","Helvetica Neue",Arial,Helvetica,Verdana,sans-serif; font-size: 15px; border: 1px solid #ABB0B2; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; color: #343434; background-color: #fff; box-sizing: border-box; height: 32px; padding: 0px 0.4em; display: inline-block; margin: 0; width: 350px; vertical-align: top;
+}
+
+#mailchimpform .button {
+	font-size: 13px;
+	border: none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	letter-spacing: .03em;
+	color: #fff;
+	background-color: #aaa;
+	box-sizing: border-box;
+	height: 32px;
+	line-height: 32px;
+	padding: 0 18px;
+	display: inline-block;
+	margin: 0;
+	transition: all 0.23s ease-in-out 0s;
+}
+
+@media (max-width: 768px){
+	#mailchimpform .button {
+		width: 100%;
+		margin: 0;
+	}
+}
+
+@media (max-width: 768px)
+	#mailchimpform input.email {
+		width: 100%;
+		margin-bottom: 5px;
+	}
+}
+
+#mailchimpform .button:hover {
+	background-color: #777;
+	cursor: pointer;
 }
 </style> 
 
@@ -84,7 +121,7 @@
    				 <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style='font-size: 13px; border: none; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; letter-spacing: .03em; color: #fff; background-color: #aaa; box-sizing: border-box; height: 32px; line-height: 32px; padding: 0 18px; display: inline-block; margin: 0; transition: all 0.23s ease-in-out 0s;'></div>
             </form>
             <div id="thankYouMessage" class="thankYouMessage" style="display:none;">
-                <p>Thank you for subscribing!</>
+                <p>Thank you, you have been added to our waitlist!</>
             </div>
         </div>
 
