@@ -66,19 +66,73 @@
 				</div>
 				<p>Get ready! Something new is coming soon!</p>
 			</div>
+			
+			<!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://ratedforus.us1.list-manage.com/subscribe/post-json?u=7f0a0d8be1f47f50a3ee562aa&amp;id=21cb242904" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7f0a0d8be1f47f50a3ee562aa_21cb242904" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+<!--End mc_embed_signup-->
 		</div><!-- end of #seed-cspio-content --> 
 	</div>
 
-		<script>jQuery(document).ready(function($){$("#cspio-description,#cspio-thankyoumsg").fitVids();});</script>
-		<script> function resize(){ $('head').append("<style id='form-style' type='text/css'></style>"); $('#form-style').html('.cspio .input-group-btn, .cspio .input-group{display:block;width:100%;}.cspio #cspio-subscribe-btn{margin-left:0;width:100%;display:block;}.cspio .input-group .form-control:first-child, .cspio .input-group-addon:first-child, .cspio .input-group-btn:first-child>.btn, .cspio .input-group-btn:first-child>.dropdown-toggle, .cspio .input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle) {border-bottom-right-radius: 4px;border-top-right-radius: 4px;}.cspio .input-group .form-control:last-child, .cspio .input-group-addon:last-child, .cspio .input-group-btn:last-child>.btn, .cspio .input-group-btn:last-child>.dropdown-toggle, .cspio .input-group-btn:first-child>.btn:not(:first-child) {border-bottom-left-radius: 4px;border-top-left-radius: 4px;}'); }
-				$('#cspio-content').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){ 
-					var width = $('#cspio-field-wrapper').width(); 
-					//console.log(width); 
-					if(width < 480 && width != 0){ 
-						resize(); 
-					} 
-				} 
-			); 
+		
+		
+		<script> 
+		
+		$("#mc-embedded-subscribe-form").submit(function(e){
+			e.preventDefault();
+			submitSubscribeForm($("#mc-embedded-subscribe-form"));
+		});
+		
+		function submitSubscribeForm($form, $resultElement) {
+        	$.ajax({
+            type: "GET",
+            url: $form.attr("action"),
+            data: $form.serialize(),
+            cache: false,
+            dataType: "jsonp",
+            jsonp: "c",
+            contentType: "application/json; charset=utf-8",
+
+            error: function(error){},
+
+            success: function(data){
+                if (data.result != "success") {
+                    var message = data.msg || "Sorry. Unable to subscribe. Please try again later.";
+
+                    if (data.msg && data.msg.indexOf("already subscribed") >= 0) {
+                        message = "You're already subscribed. Thank you.";
+                    }
+
+                    $resultElement.html(message);
+
+                } else {
+                	$resultElement.html("Thank you!<br>You must confirm the subscription in your inbox.");
+                }
+            }
+        });
+    }
+		
+		
+		function resize(){ $('head').append("<style id='form-style' type='text/css'></style>"); $('#form-style').html('.cspio .input-group-btn, .cspio .input-group{display:block;width:100%;}.cspio #cspio-subscribe-btn{margin-left:0;width:100%;display:block;}.cspio .input-group .form-control:first-child, .cspio .input-group-addon:first-child, .cspio .input-group-btn:first-child>.btn, .cspio .input-group-btn:first-child>.dropdown-toggle, .cspio .input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle) {border-bottom-right-radius: 4px;border-top-right-radius: 4px;}.cspio .input-group .form-control:last-child, .cspio .input-group-addon:last-child, .cspio .input-group-btn:last-child>.btn, .cspio .input-group-btn:last-child>.dropdown-toggle, .cspio .input-group-btn:first-child>.btn:not(:first-child) {border-bottom-left-radius: 4px;border-top-left-radius: 4px;}'); }
+				$('#cspio-content').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){ var width = $('#cspio-field-wrapper').width(); 
+				//console.log(width); 
+				if(width < 480 && width != 0){ resize(); } } ); 
 		</script>
 </body> 
 </html>
