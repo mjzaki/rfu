@@ -264,36 +264,7 @@
 	
 	
 
-	<!-- #secondary -->
 
-
-<script>
-    jQuery('.validate').submit(function (e) {
-        var $this = jQuery(this);
-        jQuery.ajax({
-            type: "GET", 
-            url: "https://ratedforus.us1.list-manage.com/subscribe/post-json?c=?",
-            data: $this.serialize(),
-            dataType: 'json',
-            contentType: "application/json; charset=utf-8",
-            error: function (err) {
-                alert("Could not connect to the registration server.");
-            },
-            success: function (data) {
-                if (data.result != "success") {
-                    jQuery('#thankYouMessage').css("display","block");
-                    jQuery('#thankYouMessage').text(data.msg.substr(0, data.msg.indexOf('<')));
-                } else {
-                    jQuery('.mailchimpform').hide();
-                    jQuery('#thankYouMessage').css("display","block");
-                    jQuery('#thankYouMessage').text(data.msg);
-
-                }
-            }
-        });
-        return false;
-    });
-</script>
 	
 <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
@@ -331,7 +302,37 @@
 <iframe name="returnFormHere" style="display:none !important;" frameborder="0"></iframe>
 
 <!--End mc_embed_signup-->		
-			
+
+		<!-- #secondary -->
+
+
+<script>
+    jQuery('#mc-embedded-subscribe-form').submit(function (e) {
+        var $this = jQuery(this);
+        jQuery.ajax({
+            type: "GET", 
+            url: "https://ratedforus.us1.list-manage.com/subscribe/post-json?c=?",
+            data: $this.serialize(),
+            dataType: 'json',
+            contentType: "application/json; charset=utf-8",
+            error: function (err) {
+                alert("Could not connect to the registration server.");
+            },
+            success: function (data) {
+                if (data.result != "success") {
+                    jQuery('#thankYouMessage').css("display","block");
+                    jQuery('#thankYouMessage').text(data.msg.substr(0, data.msg.indexOf('<')));
+                } else {
+                    jQuery('.mailchimpform').hide();
+                    jQuery('#thankYouMessage').css("display","block");
+                    jQuery('#thankYouMessage').text(data.msg);
+
+                }
+            }
+        });
+        return false;
+    });
+</script>
 						
 			
 		</div><!-- end of #seed-cspio-content -->
