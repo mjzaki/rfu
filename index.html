@@ -76,7 +76,7 @@
 </style>
 <div id="mc_embed_signup">
 <form action="https://ratedforus.us1.list-manage.com/subscribe/post-json?u=7f0a0d8be1f47f50a3ee562aa&amp;id=21cb242904" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
+    <div id="mc-field-group">
 		<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
 		<div id="mce-responses" class="clear">
 			<div class="response" id="mce-error-response" style="display:none"></div>
@@ -93,6 +93,9 @@
 </div>
 
 <!--End mc_embed_signup-->
+
+
+
 		</div><!-- end of #seed-cspio-content --> 
 	</div>
 
@@ -131,8 +134,9 @@
                     jQuery('#mce-error-response').html(message);
 
                 } else {
-                	jQuery('#mce-success-response').html("Thank you!<br>You must confirm the subscription in your inbox.");
-                	jQuery('#mc-embedded-subscribe-form').hide();
+                	jQuery('#thankYouMessage').html("Thank you, you are not part of our waitlist!");
+                	jQuery('#mce-EMAIL').hide();
+                	jQuery('#mc-embedded-subscribe').hide();
                     jQuery('#mce-success-response').css("display","block");
                     jQuery('#mce-success-response').text(data.msg);
                 }
