@@ -89,13 +89,13 @@ vertical-align: top;
 <!-- Begin Mailchimp Signup Form -->
 
         <div id="mc_embed_signup">
-            <form class="mailchimpform" action="https://ratedforus.us1.list-manage.com/subscribe/post-json?u=7f0a0d8be1f47f50a3ee562aa&amp;id=21cb242904" method="POST" target="formaReturning">
+            <form class="mailchimpform" action="https://ratedforus.us1.list-manage.com/subscribe/post?u=7f0a0d8be1f47f50a3ee562aa&amp;id=21cb242904" method="POST" target="formaReturning">
                 <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
                 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
     			<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7f0a0d8be1f47f50a3ee562aa_21cb242904" tabindex="-1" value=""></div>
    				 <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
             </form>
-            <div id="thankYouMessage" class="thankYouMessage" style="display:none;">
+            <div id="thankYouMessage" class="thankYouMessage" style="display:block;">
                 <p>Thank you for subscribing!</>
             </div>
         </div>
@@ -115,7 +115,7 @@ vertical-align: top;
         var $this = jQuery(this);
         jQuery.ajax({
             type: "GET", 
-            url: $form.attr("action"),
+            url: "https://ratedforus.us1.list-manage.com/subscribe/post-jsonp?u=7f0a0d8be1f47f50a3ee562aa&amp;id=21cb242904",
             data: $this.serialize(),
             dataType: 'json',
             contentType: "application/json; charset=utf-8",
