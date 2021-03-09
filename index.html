@@ -89,13 +89,13 @@ vertical-align: top;
 <!-- Begin Mailchimp Signup Form -->
 
         <div id="mc_embed_signup">
-            <form class="mailchimpform" action="https://ratedforus.us1.list-manage.com/subscribe/post?u=7f0a0d8be1f47f50a3ee562aa&amp;id=21cb242904" method="POST" target="formaReturning">
+            <form id="mailchimpform" action="https://ratedforus.us1.list-manage.com/subscribe/post?u=7f0a0d8be1f47f50a3ee562aa&amp;id=21cb242904" method="POST" target="formaReturning">
                 <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
                 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
     			<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7f0a0d8be1f47f50a3ee562aa_21cb242904" tabindex="-1" value=""></div>
    				 <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
             </form>
-            <div id="thankYouMessage" class="thankYouMessage" style="display:block;">
+            <div id="thankYouMessage" class="thankYouMessage" style="display:none;">
                 <p>Thank you for subscribing!</>
             </div>
         </div>
@@ -111,26 +111,27 @@ vertical-align: top;
 
 
 <script>
-    $('#mc-embedded-subscribe-form').submit(function (e) {
+    $('#mailchimpform').submit(function (e) {
         var $this = jQuery(this);
         $.ajax({
             type: "GET", 
             url: "https://ratedforus.us1.list-manage.com/subscribe/post-jsonp?u=7f0a0d8be1f47f50a3ee562aa&amp;id=21cb242904",
             data: $this.serialize(),
-            dataType: 'json',
+            dataType: 'jsonp',
+            jsonp: 'c';
             contentType: "application/json; charset=utf-8",
             error: function (err) {
                 alert("Could not connect to the registration server.");
             },
             success: function (data) {
                 if (data.result != "success") {
-                    $('.thankYouMessage').css("display","block");
-                    $('.thankYouMessage').text(data.msg.substr(0, data.msg.indexOf('<')));
+                    $('#thankYouMessage').css("display","block");
+                    $('#thankYouMessage').text(data.msg.substr(0, data.msg.indexOf('<')));
                     alert("failed");
                 } else {
-                    $('.mailchimpform').hide();
-                    $('.thankYouMessage').css("display","block");
-                    $('.thankYouMessage').text(data.msg);
+                    $("#mailchimpform").hide();
+                    $("#thankYouMessage").css("display","block");
+                    $('#thankYouMessage').text(data.msg);
                     alert("success");
 
                 }
